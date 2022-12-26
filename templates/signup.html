@@ -2,6 +2,7 @@
 
 {% block content %}
 <body class="text-center">   
+  {{ error }}
   <main class="form-signin">
     <form method="POST">{% csrf_token %}
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
