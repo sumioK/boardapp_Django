@@ -4,11 +4,9 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 def signupfunc(request):
-  object = User.objects.get(username='admin')
-  object_list = User.object.all()
-  print(object.email)
   if request.method == "POST":
-    print('this is post method')
-  else:
-    print('this is not post method')
+    username = request.POST['username']
+    password = request.POST['password']
+    # createが実行された時点で既にユーザーは作成保存される(saveメソッドは必ずしも必要ない)
+    user = User.objects.create_user(username, '', password)
   return render(request, 'signup.html', {'some':100})
