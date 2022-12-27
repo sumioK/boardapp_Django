@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.db import IntegrityError
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # Create your views here.
 
 def signupfunc(request):
