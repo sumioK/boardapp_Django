@@ -36,4 +36,6 @@ def listfunc(request):
   object_list = BoardModel.objects.all()
   return render(request, 'list.html',{'object_list' :object_list})
   
-
+def logoutfunc(request):
+  logout(request)
+  return redirect('login')
